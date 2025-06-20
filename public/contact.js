@@ -14,7 +14,7 @@ if (contactForm) {
     let isValid = true;
 
     if (name.length < 5 || name.length > 25) {
-      showError("name-error", "Name must be 5–25 characters.");
+      showError("name-error", "Name must be 5-25 characters.");
       isValid = false;
     }
 
