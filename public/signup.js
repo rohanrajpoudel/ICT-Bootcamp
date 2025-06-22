@@ -34,8 +34,20 @@ if (signupForm) {
       showError("first-name-error", "First name too short.");
       valid = false;
     }
+    if (firstName.length > 10) {
+      showError("first-name-error", "First name too long.");
+      valid = false;
+    }
+    if (middleName.length > 10) {
+      showError("middle-name-error", "Middle name too long.");
+      valid = false;
+    }
     if (lastName.length < 2) {
       showError("last-name-error", "Last name too short.");
+      valid = false;
+    }
+    if (lastName.length > 10) {
+      showError("last-name-error", "Last name too long.");
       valid = false;
     }
     if (!validateEmail(email)) {

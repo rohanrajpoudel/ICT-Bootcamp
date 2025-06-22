@@ -8,7 +8,7 @@ if (loginForm) {
     const email = document.getElementById("login-email").value.trim();
     const password = document.getElementById("login-password").value;
 
-    clearErrors("login-email-error", "login-password-error");
+    clearErrors("login-error");
 
     try {
       const res = await fetch("http://localhost:3000/login", {
@@ -20,7 +20,7 @@ if (loginForm) {
       const data = await res.json();
 
       if (!res.ok) {
-        showError("login-email-error", data.error || "Login failed.");
+        showError("login-error", data.error || "Login failed.");
       } else {
         localStorage.setItem("user", JSON.stringify(data.user));
         window.location.href = "profile.html";

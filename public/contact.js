@@ -24,7 +24,7 @@ if (contactForm) {
     }
 
     if (message.length < 3 || message.length > 200) {
-      showError("message-error", "Message must be 3–200 characters.");
+      showError("message-error", "Message must be 3-200 characters.");
       isValid = false;
     }
 

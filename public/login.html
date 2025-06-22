@@ -9,6 +9,11 @@
     <script type="module" src="./login.js"></script>
     <h1>Login to Your Account</h1>
     <form id="login-form" data-testid="login-form">
+      <div
+        id="login-error"
+        class="error-message"
+        data-testid="login-error"
+      ></div>
       <div>
         <label for="login-email">Email:</label>
         <input
@@ -19,11 +24,6 @@
           data-testid="login-email"
           required
         />
-        <div
-          id="login-email-error"
-          class="error-message"
-          data-testid="login-email-error"
-        ></div>
       </div>
       <div>
         <label for="login-password">Password:</label>
